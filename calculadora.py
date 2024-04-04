@@ -1,26 +1,24 @@
-print("********************************")
-print("*         CALCULADORA          *")
-print("*      1-   ADIÇÃO             *")
-print("*      2-  SUBTRAÇÃO           *")
-print("*      3-   DIVISÃO            *")
-print("*      4- MULTIPLICAÇÃO        *")
-print("*      5-    SAÍDA             *")
-print("********************************")
-tipo = int(input("Digite o número da operação desejada ou saída:"))
-n1 = int(input("Digite o primeiro número?"))
-n2 = int(input("Digite o segundo número?"))
-
-if tipo == 1:
-    resposta = n1 + n2
-    print(resposta)
-elif tipo == 2:
-    resposta = n1 - n2
-    print(resposta)
-elif tipo == 3:
-    resposta = n1/n2
-    print(resposta)
-elif tipo == 4:
-    resposta = n1*n2
-    print(resposta)
-else:
-    print("Obrigado por usar")
+op = ''
+print("--------Bem Vindo a Calculadora--------")
+while op != 0:
+    print("1 - soma \n2 - subtração \n3 - multiplicação \n4- divisão \n0 - sair")
+    op = int(input("Qual operação você deseja fazer?"))
+    if op == 0:
+        break
+    if op < 0 or op > 5:
+        continue
+    n1 = float(input("Qual o primeiro número?"))
+    n2 = float(input("Qual o segundo numero número?"))
+    if op == 1:
+        r = n1 +n2
+        print(r)
+    elif op == 2:
+        r = n1-n2
+        print(r)
+    elif op == 3:
+        r = n1*n2
+        print(r)
+    elif op == 4:
+        r = n1/n2
+        print(r)
+print("Obrigado por utilizar!!!")
